@@ -5,14 +5,18 @@ import co.asterv.popularmoviesstage1.utils.Constants;
 import co.asterv.popularmoviesstage1.utils.JsonUtils;
 import co.asterv.popularmoviesstage1.model.Movie;
 import android.annotation.SuppressLint;
-import android.arch.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProviders;
 import android.os.AsyncTask;
 import android.os.Parcelable;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.*;
+import androidx.appcompat.widget.*;
 import android.view.*;
 import android.widget.Toast;
+
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import org.json.*;
 import java.io.IOException;
 import java.net.URL;

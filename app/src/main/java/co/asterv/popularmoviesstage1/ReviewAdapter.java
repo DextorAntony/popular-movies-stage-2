@@ -3,8 +3,8 @@ package co.asterv.popularmoviesstage1;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.support.constraint.ConstraintLayout;
-import android.support.v7.widget.RecyclerView;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -63,6 +63,7 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ViewHolder
 
         holder.reviewButton.setOnClickListener((View v) -> {
             Intent i = new Intent(Intent.ACTION_VIEW);
+            i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             i.setData(Uri.parse(movies[position].getReviewUrl ()));
             context.startActivity(i);
         });

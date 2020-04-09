@@ -1,19 +1,19 @@
 package co.asterv.popularmoviesstage1;
 
 import android.annotation.SuppressLint;
-import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModelProviders;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
 import android.content.*;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.AsyncTask;
-import android.support.annotation.Nullable;
-import android.support.v4.app.NavUtils;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import androidx.core.app.NavUtils;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.util.Log;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.*;
@@ -47,7 +47,7 @@ public class MovieDetails extends AppCompatActivity {
         super.onCreate (savedInstanceState);
         setContentView (R.layout.activity_movie_details);
 
-        android.support.v7.app.ActionBar actionBar = this.getSupportActionBar ();
+        androidx.appcompat.app.ActionBar actionBar = this.getSupportActionBar ();
         if(actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled (true);
         }
@@ -225,6 +225,8 @@ public class MovieDetails extends AppCompatActivity {
         Intent appIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(Constants.YOUTUBE_APP_BASE + id));
         Intent webIntent = new Intent(Intent.ACTION_VIEW,
                 Uri.parse(Constants.YOUTUBE_BASE_URL + id));
+        appIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        webIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         // If youtube is not installed, plays from web
         try {
             context.startActivity(appIntent);

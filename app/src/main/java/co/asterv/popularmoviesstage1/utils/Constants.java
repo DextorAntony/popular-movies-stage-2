@@ -23,7 +23,7 @@ public class Constants {
 
     /* DATABASE API URLS */
     final static String API_KEY = BuildConfig.API_KEY;
-    final static String MOVIEDB_BASE_URL = "http://api.themoviedb.org/3/movie";
+    final static String MOVIEDB_BASE_URL = "https://api.themoviedb.org/3/movie";
     public final static String MOVIEDB_IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w342";
     public final static String YOUTUBE_BASE_URL = "http://www.youtube.com/watch?v=";
     public final static String YOUTUBE_APP_BASE = "vnd.youtube:";

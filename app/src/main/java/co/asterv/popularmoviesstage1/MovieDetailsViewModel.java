@@ -1,7 +1,7 @@
 package co.asterv.popularmoviesstage1;
 
-import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.ViewModel;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.ViewModel;
 
 import co.asterv.popularmoviesstage1.database.AppDatabase;
 import co.asterv.popularmoviesstage1.model.Movie;

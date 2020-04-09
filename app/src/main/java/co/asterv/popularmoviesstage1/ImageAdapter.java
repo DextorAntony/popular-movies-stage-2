@@ -2,8 +2,8 @@ package co.asterv.popularmoviesstage1;
 import co.asterv.popularmoviesstage1.model.Movie;
 
 import android.content.*;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.widget.*;
 import android.view.ViewGroup;
@@ -62,6 +62,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
 
         holder.itemView.setOnClickListener(view -> {
             Intent intent = new Intent(mContext, MovieDetails.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             intent.putExtra("movie", mMovies[position]);
             mContext.startActivity(intent);
         });
