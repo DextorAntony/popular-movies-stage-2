@@ -6,4 +6,5 @@
     android:layout_height="300dp"
     android:layout_margin="0dp"
     android:adjustViewBounds="true"
-    android:padding="8dp"></ImageView>
+    android:padding="8dp"
+    android:contentDescription="@null" />

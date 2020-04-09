@@ -5,4 +5,15 @@
     <string name="top_rated_setting">Top Rated</string>
     <string name="favorites_setting">Favorite Movies</string>
     <string name="API_KEY">fa0a176a8387872df129abba46a546c8</string>
+    <string name="add_to_favorites">Add To Favorites</string>
+    <string name="watch_trailer">WATCH TRAILER</string>
+    <string name="reviews">Reviews</string>
+    <string name="overview">Overview</string>
+    <string name="released">Released:</string>
+    <string name="rating">Rating:</string>
+    <string name="xx_xx_xxxx">XX/XX/XXXX</string>
+    <string name="x_x_10">x.x / 10</string>
+    <string name="title_placeholder">Title Placeholder</string>
+    <string name="textview">TextView</string>
+    <string name="full_review">Full Review</string>
 </resources>
